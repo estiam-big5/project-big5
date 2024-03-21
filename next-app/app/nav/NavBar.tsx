@@ -1,4 +1,5 @@
 import NavBarItem from "./NavBarItem";
+import "./nav.css"
 
 const menuItems = [
   {
@@ -24,6 +25,8 @@ export default function NavBar () {
     navBarItems.push(<NavBarItem pageTitle={menuItems[i].pageTitle} pageRoute={menuItems[i].pageRoute} pageIcon={menuItems[i].pageIcon} key={`NavBarItem${i}`}/>)
   }
   return (
-    navBarItems
+    <nav className="nav-bar horizontal-center flex-row flex-center">
+      {navBarItems}
+    </nav>
   )
 }
