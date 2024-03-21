@@ -9,7 +9,7 @@ type Props = {
 export default function NavBarItem(props: Props) {
   
   return (
-    <Link href={props.pageRoute}>
+    <Link href={props.pageRoute} className="nav-item">
       <Image
         src={props.pageIcon}
         alt={props.pageTitle}

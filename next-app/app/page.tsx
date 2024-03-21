@@ -1,27 +1,13 @@
-import Image from "next/image";
-import NavBar from "./components/NavBar";
+import './home.css';
+import NavBar from "./nav/NavBar";
+import CryptoStat from "./CryptoStat/CryptoStat";
 
 export default function Home() {
-  return (
-      <main>
-        <div className="title"><h1>Home</h1></div>
-        <div className="global">
-          <div className="container">
-            <div className="container-top">
-              <div className="BTC"></div>
-              <div className="DOGE"></div>
-            </div>
-            <div className="container-bottom">
-              <div className="ETH"></div>
-              <div className="USDT"></div>
-            </div>
-          </div>
-        </div>
-        <div className="menu">
-          <div className="menu-item"><img src="/home.png"/></div>
-          <div className="menu-item"><img src="./convert.png"/></div>
-          <div className="menu-item"><img src="./wallet.png"/></div>
-        </div>
-      </main>
-  );
+  return (<>
+    <main className='full-height flex-column flex-center center-space-content'>
+      <h1 className='page-title'>Home</h1>
+      <CryptoStat/>
+    </main>
+    <NavBar/>
+  </>);
 }

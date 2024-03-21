@@ -1,91 +1,46 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --main-background-color: black;
+}
+
 body{
   margin: 0;
   background-color: black;
   color: white
 }
 
-h1{
-  font-size: 5vh;
-}
-
-.title{
-  margin-left: 2vh;
-}
-
-.global {
-  background-color: black;
-  height: 100vh;
-  display: flex;
-  align-items: center; /* Alignement vertical */
-}
-
-.container {
-  /* background-color: blue; */
-  height: 50vh;
-  width: 100%;
-  /* max-width: 500px;  */
+.horizontal-center {
   margin: 0 auto;
-  margin-bottom: 40vh;
 }
-.container-top{
-  /* background-color:yellow; */
-  height: 30vh;
+
+.flex-row {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
   align-items: center;
-}
-.BTC{
-  background-color: #E335DC;
-  height: 20vh;
-  width: 20vh;
-  border-radius: 2vh;
-}
-.DOGE{
-  background-color: #9142FF;
-  height: 20vh;
-  width:20vh;
-  border-radius: 2vh;
+  justify-content: center;
 }
 
-.container-bottom{
-  /* background-color:beige; */
-  height: 19vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.full-height {
+  height: calc(100vh - 60px);
 }
 
-.ETH{
-  background-color: #00D092;
-  height: 20vh;
-  width:20vh;
-  border-radius: 2vh;
-}
-.USDT{
-  background-color:#1E1E1E;
-  height: 20vh;
-  width:20vh;
-  border-radius: 2vh;
+.center-space-content>* {
+  margin: 0 0 auto 0;
 }
 
-.menu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: black;
-  display: flex;
-
-}
-
-.menu-item{
-  font-size:5vh;
-  margin-left:5vh;
-}
-
-img{
-  margin-top:2vh;
-  margin-left: 3vh;
-  height: 4vh;
-  color: white;
+.page-title {
+  font-size: 3rem;
 }
