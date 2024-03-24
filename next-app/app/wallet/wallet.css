@@ -1,0 +1,106 @@
+body {
+    text-align: center;
+    padding: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.button-connection {
+    width: 200px;
+    height: 48px;
+    background-color: #00D092;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.button-connection:hover, .button-invest:hover {
+    background-color: white;
+    color: #00D092;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.main-container>* {
+    margin-bottom: 15px;
+}
+
+.wallet-card {
+    width: 300px;
+    height: 180px;
+    background: linear-gradient(to right, #343434 0%, #010101 100%);
+    box-shadow: 8px 8px 16px 0 rgba(4, 4, 4, 0.8), -8px -8px 12px 0 rgba(39, 39, 44, 0.48);
+    border-radius: 24px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-card {
+    text-align: left;
+}
+
+.bottom-card > *{
+    margin-bottom: 10px;
+}
+
+.wallet-adress{
+    font-size: 10px;
+}
+
+.bottom-buttons {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-send {
+    width: 120px;
+    height: 48px;
+    background-color: #9142FF;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.button-send:hover {
+    background-color: #5f2aa9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-invest {
+    width: 120px;
+    height: 48px;
+    background-color: #00D092;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
