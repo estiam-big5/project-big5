@@ -19,7 +19,7 @@ export default function CryptoStatCard(props: CardInfo) {
   }
   useEffect(() => {
     fetch(
-      `https://api.api-ninjas.com/v1/cryptoprice?symbol=${info.abrv}USD`,
+      `https://api.api-ninjas.com/v1/cryptoprice?symbol=${info.abrv}USDC`,
       {
         "headers": {
           "X-Api-Key": "z8qtosqrqsAxTLnGx7DQfQ==9uaFTWWvRsYBFc41"
