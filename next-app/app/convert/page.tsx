@@ -1,5 +1,6 @@
 "use client";
 
+import NavBar from "../nav/NavBar";
 import "./conversion.css";
 import ConversionCard from "./ConversionCard";
 import React, { useState } from "react";
@@ -21,7 +22,7 @@ export default function ConversionPage() {
   const [inputValueEUR, setInputValueEUR] = useState(0);
   const [inputValueETH, setInputValueETH] = useState(0);
 
-  return (
+  return (<>
     <div className="conversion-page">
       <ConversionCard
         name="E en Euro"
@@ -40,5 +41,6 @@ export default function ConversionPage() {
         key={`ConversionCard1`}
       />
     </div>
-  );
+    <NavBar/>
+  </>);
 }
