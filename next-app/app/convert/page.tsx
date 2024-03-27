@@ -4,6 +4,7 @@ import NavBar from "../nav/NavBar";
 import "./conversion.css";
 import ConversionCard from "./ConversionCard";
 import React, { useState } from "react";
+import Image from 'next/image';
 
 const currenciesData = [
   {
@@ -35,7 +36,9 @@ export default function ConversionPage() {
             setInputValue={setInputValueEUR}
             key={`ConversionCard0`}
           />
-          <div className="arrow">⇆</div>
+          <div className="arrow">
+            <Image src="/conversion/conversion.png" alt="conversion" width={150} height={150} />
+          </div>
           <ConversionCard
             name="€ en Ether"
             abrv={currenciesData[1].abrv}
