@@ -74,7 +74,7 @@ export default function Wallet() {
           </div>
         )
       }
-      <NavBar />
+      <NavBar/>
     </div>
   );
 }
