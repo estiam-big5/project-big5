@@ -1,0 +1,60 @@
+.crypto-stat {
+  --grid-gap: 20px;
+  --card-size: min(calc(100vw / 2 - var(--grid-gap)), calc(100vh / 2 - var(--grid-gap) - 60px));
+  display: grid;
+  grid-template-columns: repeat(2, var(--card-size));
+  grid-template-rows: repeat(2, var(--card-size));
+  grid-gap: var(--grid-gap);
+  justify-content: center;
+}
+.crypto-stat-card {
+  display: grid;
+  grid-template-areas:
+    "abrv var"
+    "val val"
+    "brand brand";
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.coin-abrv {
+  grid-area: abrv;
+  font-weight: bold;
+}
+
+.coin-variation {
+  grid-area: var;
+  text-align: end;
+  font-style: italic;
+  font-weight: light;
+}
+
+.coin-value {
+  grid-area: val;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.coin-brand {
+  grid-area: brand;
+  display: flex;
+  align-items: flex-end;
+}
+
+.coin-logo {
+  padding: 0 5px 0 0;
+}
+
+.Bitcoin{
+  background-color: #E335DC;
+}
+.Doge{
+  background-color: #9142FF;
+}
+
+.Etherum{
+  background-color: #00D092;
+}
+.USDT{
+  background-color:#1E1E1E;
+}
