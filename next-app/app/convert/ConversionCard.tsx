@@ -30,7 +30,9 @@ export default function ConversionCard(props: ConversionCardInfo) {
 
   return (
     <div className={`conversion-card ${props.name}`}>
-      <div className="currency-abrv">{props.abrv}</div>
+      {/* <div className="currency-abrv">{props.abrv}</div>
+      <div className="currency-logo">{props.logo}</div> */}
+      <div className="currency-name">{props.name}</div>
       <input
         className="currency-input"
         type="number"
@@ -39,11 +41,9 @@ export default function ConversionCard(props: ConversionCardInfo) {
       />
       <div className="conversion-rate">
         {props.abrv === "EUR"
-          ? (props.inputValue * conversionRate).toFixed(2)
-          : (props.inputValue / conversionRate).toFixed(2)}
+          ? (props.inputValue * conversionRate).toFixed(2) + " €"
+          : (props.inputValue / conversionRate).toFixed(2) + " E"}
       </div>
-      <div className="currency-logo">{props.logo}</div>
-      <div className="currency-name">{props.name}</div>
     </div>
   );
 }
