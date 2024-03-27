@@ -2,43 +2,41 @@ import './cryptostat.css'
 import CryptoStatCard from './CryptoStatCard'
 
 
-const coinsData = [
+const defaultCoinsData = [
   {
     name: "Bitcoin",
     abrv: "BTC",
-    variation: "+n%",
-    value: "888.88$",
+    variation: "",
+    value: "fetching",
     logo: "B"
   },
   {
     name: "Doge",
     abrv: "DOGE",
-    variation: "+n%",
-    value: "888.88$",
+    variation: "",
+    value: "fetching",
     logo: "D"
   },
   {
     name: "Etherum",
     abrv: "ETH",
-    variation: "+n%",
-    value: "888.88$",
+    variation: "",
+    value: "fetching",
     logo: "E"
   },
   {
-    name: "USDT",
-    abrv: "USDT",
-    variation: "+n%",
-    value: "888.88$",
-    logo: "USDT"
+    name: "Avalanche",
+    abrv: "AVAX",
+    variation: "",
+    value: "fetching",
+    logo: "A"
   }
 ]
 
 export default function CryptoStat () {
-
-  //TODO: function to retrieve data from web3 api
   let cryptoStatItems = []
-  for (let i=0; i<coinsData.length; i++) {
-    cryptoStatItems.push(<CryptoStatCard name={coinsData[i].name} abrv={coinsData[i].abrv} variation={coinsData[i].variation} value={coinsData[i].value} logo={coinsData[i].logo} key={`CryptoStatCard${i}`}/>)
+  for (let i=0; i<defaultCoinsData.length; i++) {
+    cryptoStatItems.push(<CryptoStatCard name={defaultCoinsData[i].name} abrv={defaultCoinsData[i].abrv} variation={defaultCoinsData[i].variation} value={defaultCoinsData[i].value} logo={defaultCoinsData[i].logo} key={`CryptoStatCard${i}`}/>)
   }
   return (
     <div className="crypto-stat">
