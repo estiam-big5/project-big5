@@ -1,61 +1,41 @@
 .conversion-page {
-  --grid-gap: 20px;
-  --card-size: min(
-    calc(100vw / 2 - var(--grid-gap)),
-    calc(100vh / 2 - var(--grid-gap) - 60px)
-  );
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, var(--card-size));
-  grid-gap: var(--grid-gap);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  background-color: #000000;
 }
 
 .conversion-card {
-  display: grid;
-  grid-template-areas:
-    "abrv rate"
-    "logo logo"
-    "name name";
+  --grid-gap: 20px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: min(calc(100vw / 2 - var(--grid-gap)), calc(100vh / 2 - var(--grid-gap) - 60px));
+  margin: 20px;
   padding: 20px;
   border-radius: 20px;
-  background-color: #f0f0f0;
+  background-color: #333;
+  color: #fff;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.currency-abrv {
-  grid-area: abrv;
-  font-weight: bold;
+.conversion-card:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
-.conversion-rate {
-  grid-area: rate;
-  text-align: end;
-  font-style: italic;
-  font-weight: light;
-}
-
-.currency-logo {
-  grid-area: logo;
-  padding: 0 5px 0 0;
+.currency-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
   text-align: center;
-  font-size: 1.75rem;
-  font-weight: 800;
-}
-
-.currency-name {
-  grid-area: name;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.Ether {
-  background-color: #00d092;
-}
-
-.Euro {
-  background-color: #0000ff;
 }
